@@ -1,0 +1,94 @@
+/* General Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f8f8f8;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  font-size: 2.5em; /* 75% larger than base */
+}
+
+.row {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* Section Styles */
+.section {
+  position: relative;
+  background: #e2e2e2;
+  border: 1px solid #000;
+  margin: 10px;
+  padding: 40px 15px 15px 15px; /* top padding for title */
+  float: left;
+  min-height: 250px;
+}
+
+.section-title {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 120px;
+  padding: 8px 0;
+  border: 1px solid #000;
+  text-align: center;
+  font-size: 1.25em; /* 25% larger than base */
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Unique colors for each section title */
+.chicken {
+  background: #ff9800;
+}
+.beef {
+  background: #c62828;
+}
+.sushi {
+  background: #1976d2;
+}
+
+/* Desktop: 3 columns */
+@media (min-width: 992px) {
+  .section {
+    width: 31.33%;
+    margin: 1%;
+  }
+}
+
+/* Tablet: 2 columns, 1 full row */
+@media (min-width: 768px) and (max-width: 991px) {
+  .section {
+    width: 48%;
+    margin: 1%;
+  }
+  .section:nth-child(3) {
+    width: 98%;
+    clear: both;
+  }
+}
+
+/* Mobile: 1 column */
+@media (max-width: 767px) {
+  .section {
+    width: 98%;
+    margin: 1% auto;
+    float: none;
+  }
+}
+
+/* Clear floats after .row */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}

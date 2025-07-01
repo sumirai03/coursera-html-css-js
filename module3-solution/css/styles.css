@@ -1,0 +1,16 @@
+/* Tall section with background color and padding */
+.section-tall {
+  background-color: #f8e8d4;
+  min-height: 1000px;
+  padding: 30px 15px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* Make mobile menu background stand out */
+@media (max-width: 767px) {
+  .navbar-nav {
+    background-color: #f5cba7;
+  }
+}
